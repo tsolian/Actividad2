@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    
+    
+    <TextView
+        android:id="@+id/tvDollars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="15dp"
+        android:text="Dólares" />
+
+    <EditText
+        android:id="@+id/etDollars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvDollars"
+        android:layout_below="@+id/tvDollars"
+        android:ems="10"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etDollars"
+        android:layout_alignLeft="@+id/etDollars"
+        android:layout_marginTop="20dp"
+        android:text="Convertir"
+        android:onClick="btConvertFunction" />
+
+    <TextView
+        android:id="@+id/tvEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btConvert"
+        android:layout_below="@+id/btConvert"
+        android:layout_marginTop="20dp"
+        android:text="Euros" />
+
+    <EditText
+        android:id="@+id/etEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEuros"
+        android:layout_alignLeft="@+id/tvEuros"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etEuros"
+        android:layout_below="@+id/etEuros">
+
+        <RadioButton
+            android:id="@+id/rbDollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+            android:text="Convertir a Dolar" />
+
+        <RadioButton
+            android:id="@+id/rbEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="onRadioButtonClicked"
+            android:text="convertir a Euro" />
+
+    </RadioGroup>
+
+</RelativeLayout>
